@@ -5,7 +5,9 @@ const ProductDetail = ({ product }) => {
   return (
     <div>
       <Link href={'/'} passHref>
-        <a className="p-4 block bg-slate-200 font-bold ">Back to products</a>
+        <a className="p-4 block text-primary bg-th-background-secondary font-bold hover:text-blue-700 active:text-blue-800">
+          Back to products
+        </a>
       </Link>
       <div className="grid grid-cols-1 lg:grid-cols-2 lg:p-28">
         <div className="w-full h-full max-w-[500px] max-h-[500px] relative mx-auto">

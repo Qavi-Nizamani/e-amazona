@@ -1,21 +1,25 @@
 import React from 'react';
 import Link from 'next/link';
+import ThemeChanger from './ThemeChanger';
 
 const Header = () => {
   return (
-    <header>
-      <nav className="px-4 flex h-12 items-center justify-between shadow-md dark:shadow-white">
-        <Link href="/">
-          <a className="text-lg font-bold">amazona</a>
-        </Link>
-        <div className="gap-4 flex">
-          <Link href="/cart">
-            <a>Cart</a>
+    <header className="border-b border-th-primary-border font-bold bg-th-primary-header">
+      <nav className="container px-6 flex mx-auto">
+        <div className="flex pr-6 justify-between h-16 items-center flex-1">
+          <Link href="/">
+            <a className="text-xl">Amazona</a>
           </Link>
-          <Link href="/login">
-            <a>Login</a>
-          </Link>
+          <div className="gap-4 flex">
+            <Link href="/cart">
+              <a>Cart</a>
+            </Link>
+            <Link href="/login">
+              <a>Login</a>
+            </Link>
+          </div>
         </div>
+        <ThemeChanger />
       </nav>
     </header>
   );

@@ -1,17 +1,29 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+  darkMode: 'media', // or 'media' or 'class'
   theme: {
     extend: {
       colors: {
-        primary: 'var(--primary)',
-        secondary: 'var(--secondary)',
-        main: 'var(--main)',
-        background: 'var(--background)',
-        header: 'var(--header)',
-        accent: 'var(--accent)',
+        'th-background': 'var(--background)',
+        'th-background-secondary': 'var(--background-secondary)',
+        'th-foreground': 'var(--foreground)',
+        'th-primary-dark': 'var(--primary-dark)',
+        'th-primary-medium': 'var(--primary-medium)',
+        'th-primary-light': 'var(--primary-light)',
+        'th-accent-dark': 'var(--accent-dark)',
+        'th-accent-medium': 'var(--accent-medium)',
+        'th-accent-light': 'var(--accent-light)',
+        'th-primary-border': 'var(--primary-border)',
+        'th-primary-header': 'var(--primary-header)',
+        'th-primary-btn': 'var(--primary-btn)',
+        'th-primary-btn-hover': 'var(--primary-btn-hover)',
+        'th-primary-btn-active': 'var(--primary-btn-active)',
       },
     },
+  },
+  variants: {
+    extend: {},
   },
   plugins: [],
 };

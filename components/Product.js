@@ -12,7 +12,7 @@ const Product = ({ product }) => {
         width={300}
         className="rounded-t-md"
       />
-      <div className="py-4 font-bold bg-slate-200 rounded-b-md text-black">
+      <div className="py-4 font-bold bg-th-background-secondary rounded-b-md text-th-accent-light">
         <p>{product.name}</p>
         <p>{product.brand}</p>
         <p>${product.price}</p>

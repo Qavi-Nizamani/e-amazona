@@ -29,22 +29,54 @@ a {
   }
 }
 
-.root,
-#root,
-#docs-root {
-  --primary: #367ee9;
-  --secondary: #a0aec0;
-  --primary-accent: #718096;
-  --primary-background: #fff;
-  --primary-main: #0d0106;
-  --primary-header: #2d3748;
-  --primary-btn-bg: rgb(251, 191, 36);
+:root {
+  --background: theme('colors.white');
+  --background-secondary: theme('colors.gray.100');
+
+  --accent-dark: theme('colors.fuchsia.900');
+  --accent-medium: theme('colors.fuchsia.700');
+  --accent-light: theme('colors.black');
+
+  --primary-dark: theme('colors.gray.600');
+  --primary-medium: theme('colors.gray.400');
+  --primary-light: theme('colors.gray.200');
+
+  --primary-border: theme('colors.slate.200');
+
+  --primary-header: theme('colors.gray.100');
+
+  --primary-btn: theme('colors.amber.300');
+  --primary-btn-hover: theme('colors.amber.400');
+  --primary-btn-active: theme('colors.amber.500');
+}
+
+[data-theme='dark'] {
+  --background: theme('colors.black');
+  --background-secondary: theme('colors.gray.900');
+
+  /* Text colors */
+  --accent-dark: theme('colors.fuchsia.900');
+  --accent-medium: theme('colors.fuchsia.700');
+  --accent-light: theme('colors.white');
+
+  --primary-dark: theme('colors.gray.300');
+  --primary-medium: theme('colors.gray.200');
+  --primary-light: theme('colors.gray.900');
+
+  --primary-border: theme('colors.gray.700');
+
+  --primary-header: theme('colors.gray.900');
+
+  /* Button colors */
+  --primary-btn: theme('colors.amber.700');
+  --primary-btn-hover: theme('colors.amber.800');
+  --primary-btn-active: theme('colors.amber.900');
 }
 
 .card {
-  @apply rounded-lg border border-gray-200 shadow-md;
+  @apply rounded-lg border border-th-primary-border;
 }
 
 .primary-button {
-  @apply rounded bg-amber-300 py-2 px-4 shadow outline-none hover:bg-amber-400 active:bg-amber-500;
+  @apply rounded bg-th-primary-btn py-2 px-4 shadow outline-none hover:bg-th-primary-btn-hover active:bg-th-primary-btn-active;
 }
