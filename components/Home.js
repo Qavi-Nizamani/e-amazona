@@ -1,15 +1,10 @@
 import React from 'react';
-import Product from './Product';
+import Products from './Products';
 
 const Home = () => {
   return (
-    <section className="flex flex-wrap justify-start gap-4">
-      <Product />
-      <Product />
-      <Product />
-      <Product />
-      <Product />
-      <Product />
+    <section className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-4">
+      <Products />
     </section>
   );
 };
