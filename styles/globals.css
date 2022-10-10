@@ -30,9 +30,10 @@ a {
 }
 
 :root {
-  --background: theme('colors.white');
-  --background-secondary: theme('colors.gray.100');
+  --background: theme('colors.gray.100');
+  --background-secondary: theme('colors.white');
 
+  /* Text colors */
   --accent-dark: theme('colors.fuchsia.900');
   --accent-medium: theme('colors.fuchsia.700');
   --accent-light: theme('colors.black');
@@ -43,16 +44,24 @@ a {
 
   --primary-border: theme('colors.slate.200');
 
-  --primary-header: theme('colors.gray.100');
-
+  --primary-header: theme('colors.white');
+  /* Button colors */
   --primary-btn: theme('colors.amber.300');
   --primary-btn-hover: theme('colors.amber.400');
   --primary-btn-active: theme('colors.amber.500');
+
+  /* Badge colors */
+  --primary-badge: theme('colors.amber.300');
+
+  /* Primary link colors */
+  --primary-link: theme('colors.blue.600');
+  --primary-link-hover: theme('colors.blue.700');
+  --primary-link-active: theme('colors.blue.800');
 }
 
 [data-theme='dark'] {
-  --background: theme('colors.black');
-  --background-secondary: theme('colors.gray.900');
+  --background: theme('colors.gray.900');
+  --background-secondary: theme('colors.black');
 
   /* Text colors */
   --accent-dark: theme('colors.fuchsia.900');
@@ -63,20 +72,45 @@ a {
   --primary-medium: theme('colors.gray.200');
   --primary-light: theme('colors.gray.900');
 
-  --primary-border: theme('colors.gray.700');
+  --primary-border: theme('colors.gray.800');
 
-  --primary-header: theme('colors.gray.900');
+  --primary-header: theme('colors.black');
 
   /* Button colors */
   --primary-btn: theme('colors.amber.700');
   --primary-btn-hover: theme('colors.amber.800');
   --primary-btn-active: theme('colors.amber.900');
+
+  /* Badge colors */
+  --primary-badge: theme('colors.amber.700');
+  /* --primary-btn-hover: theme('colors.amber.800');
+  --primary-btn-active: theme('colors.amber.900'); */
+
+  /* Primary link colors */
+  --primary-link: theme('colors.blue.600');
+  --primary-link-hover: theme('colors.blue.700');
+  --primary-link-active: theme('colors.blue.800');
 }
 
 .card {
-  @apply rounded-lg border border-th-primary-border;
+  @apply rounded-lg border border-th-primary-border bg-th-background-secondary;
 }
 
 .primary-button {
   @apply rounded bg-th-primary-btn py-2 px-4 shadow outline-none hover:bg-th-primary-btn-hover active:bg-th-primary-btn-active;
+}
+.primary-hover {
+  @apply bg-th-primary-btn shadow hover:bg-th-primary-btn-hover active:bg-th-primary-btn-active;
+}
+
+.primary-badge {
+  @apply px-2 rounded-full bg-th-primary-badge;
+}
+
+.primary-link {
+  @apply hover:text-th-primary-link-hover active:text-th-primary-link-active;
+}
+
+select {
+  outline: none;
 }

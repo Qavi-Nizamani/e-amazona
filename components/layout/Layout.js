@@ -1,5 +1,7 @@
-import Header from './Header';
-import Footer from './Footer';
+import Header from './header/Header';
+import Footer from './footer/Footer';
+import React from 'react';
+
 const Layout = ({ children }) => {
   return (
     <div className="flex flex-col justify-between bg-th-background">
@@ -10,4 +12,4 @@ const Layout = ({ children }) => {
   );
 };
 
-export default Layout;
+export default React.memo(Layout);

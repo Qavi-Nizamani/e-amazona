@@ -1,11 +1,12 @@
+import { Provider } from 'react-redux';
+import store from '../store/index';
 import '../styles/globals.css';
-import { ThemeProvider } from 'next-themes';
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ThemeProvider>
+    <Provider store={store}>
       <Component {...pageProps} />
-    </ThemeProvider>
+    </Provider>
   );
 }
 
